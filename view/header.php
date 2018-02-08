@@ -1,8 +1,9 @@
 		<header>
+			<img src="/asset/banniere.jpg" alt="banniere">
 		</header>
 		<nav>
 			<ul>
-				<li><a href="/"><img src="" alt="logo"></a></li>
+				<li><a href="/"><img src="openshop logo" alt="logo"></a></li>
 				<li><a href="/">openshop</a></li>
 			</ul>
 			<ul>

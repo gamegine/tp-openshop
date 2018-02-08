@@ -6,18 +6,20 @@
 <?php include('header.php'); ?>
 		<main>
 			<section>
-				<div><img src="" alt=""></div>
+				<h2>article name</h2>
+				<div><img src="" alt="articles img"></div>
 				<div>
-					<h2></h2>
-					<p></p>
+					<p>vendeur/pix ect ..</p>
+					<p>article short desc</p>
 				</div>
+				<p>article full desc</p>
 			</section>
 			<section>
-				<h2></h2>
+				<h2>commentary</h2>
 				<ul>
-					<li></li>
-					<li></li>
-				</ul>>
+					<li><a>username</a><p>blablabla</p></li>
+					<li><a>username</a><p>blablabla</p></li>
+				</ul>
 			</section>
 		</main>
 <?php include('footer.html'); ?>	
