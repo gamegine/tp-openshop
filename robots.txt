@@ -1,0 +1,6 @@
+#robots.txt
+User-Agent: *
+Disallow:
+Allow: *
+
+Sitemap: http://op.gamgine.com/sitemap.xml
