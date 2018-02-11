@@ -4,8 +4,8 @@
 <?php include('asset/head.php'); ?>
 	<body>
 <?php include('header.php'); ?>
-		<main>
-			<section>
+		<main class="pure-g">
+			<section class="pure-u-24-24" id="mostpopular">
 				<h2>most popular articles</h2>
 				<ul>
 					<li><img src="" alt="ar name"></li>
@@ -13,39 +13,41 @@
 					<li><img src="" alt="ar name"></li>
 				</ul>
 			</section>
-			<section>
+			<section class="pure-u-22-24">
 				<h2>about openshop</h2>
 				<p>
 				open shop is a e-shop dedicated to open source
 				</p>
 			</section>
-			<section>
-				<h2>let's celebrate the 20 Years of Open Source</h2>
-				<p>
-					The Open Source Initiative (OSI) is celebrating its 20th Anniversary in 2018. 
-					<br>The “open source” label was created at a strategy session held on February 3rd, 1998 in Palo Alto, California. 
-					<br>That same month, the OSI was founded. As a global non-profit, 
-					<br>the OSI protects and promotes open source software, development and communities, championing software freedom in society through education, collaboration, 
-					<br>and infrastructure, stewarding the Open Source Definition (OSD), and preventing abuse of the ideals and ethos inherent to the open source movement
-				</p>
-			</section>
-			<section>
-				<h2>why choose open source</h2>
-				<ul>
-					<li><span class="fa fa-user-secret fa-5x"></span></li>
-					<li><span class="fa fa-puzzle-piece fa-5x"></span></li>
-					<li><span class="fa fa-edit fa-5x"></span></li>
-					<li><span class="fa fa-share-square fa-5x"></span></li>
-				</ul>
-				<p>
-				The open source movement highlights quality.
-				<br>The source code and the product can be re-read and improved by everyone, which can include the correction of security problems.
-				<br>open source confer technological independence at a lower cost.
-				<br>
-				<br>Open source often allows to have many choices of software and hardware.
-				<br>Indeed, projects with the same function can coexist.
-				<br>Moreover, any conflict concerning a software or material can be solved by a fork, with a second element which will be created, based on the first one.
-				</p>
+			<section class="pure-u-22-24">
+				<article>
+					<h2>let's celebrate the 20 Years of Open Source</h2>
+					<p>
+						The Open Source Initiative (OSI) is celebrating its 20th Anniversary in 2018. 
+						<br>The “open source” label was created at a strategy session held on February 3rd, 1998 in Palo Alto, California. 
+						<br>That same month, the OSI was founded. As a global non-profit, 
+						<br>the OSI protects and promotes open source software, development and communities, championing software freedom in society through education, collaboration, 
+						<br>and infrastructure, stewarding the Open Source Definition (OSD), and preventing abuse of the ideals and ethos inherent to the open source movement
+					</p>
+				</article>
+				<article id="why">
+					<h2>why choose open source</h2>
+					<ul>
+						<li class="ib"><span class="fa fa-user-secret fa-5x"></span></li>
+						<li class="ib"><span class="fa fa-puzzle-piece fa-5x"></span></li>
+						<li class="ib"><span class="fa fa-edit fa-5x"></span></li>
+						<li class="ib"><span class="fa fa-share-square fa-5x"></span></li>
+					</ul>
+					<p>
+					The open source movement highlights quality.
+					<br>The source code and the product can be re-read and improved by everyone, which can include the correction of security problems.
+					<br>open source confer technological independence at a lower cost.
+					<br>
+					<br>Open source often allows to have many choices of software and hardware.
+					<br>Indeed, projects with the same function can coexist.
+					<br>Moreover, any conflict concerning a software or material can be solved by a fork, with a second element which will be created, based on the first one.
+					</p>
+				</article>
 			</section>
 		</main>
 <?php include('footer.html'); ?>	
