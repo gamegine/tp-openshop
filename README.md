@@ -4,6 +4,7 @@ open shop is an e commerce dedicated to open source products whether software or
 all users can buy but also sell their articles.  
 the product documentation is always provided and accessible.  
 the products can be sold by several users.  
+[colors](http://www.colourlovers.com/palette/4555146/opensource)  
 ## :clipboard: functionality
 - [ ] session (login register ...)
 - [ ] user setting
@@ -28,6 +29,7 @@ the products can be sold by several users.
 - Mysql
 - php 7+
 	- PDO Mysql
+- Pure css
 ## :hammer: builds
 # License
 openshop is licensed under the [Mozilla Public License 2.0](https://github.com/gamgine/openshop/blob/master/LICENSE)
