@@ -8,6 +8,10 @@
 	$designer=$author="gamgine";
 	$img = "/asset/banniere.jpg";
 
+	$article=array('name'=>"article name",'sdesc'=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",'prix'=>250,'img'=>"/articlesimg/arimg.jpg",'url'=>"/article.php");
+	
+	$articles=array($article,$article,$article,$article,$article,$article,$article);
+
 	$title="articles page 1";
 	$desc="cat + articles page";
 

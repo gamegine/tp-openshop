@@ -7,11 +7,17 @@
 		<main class="pure-g">
 			<section class="pure-u-24-24" id="mostpopular">
 				<h2>most popular articles</h2>
-				<ul>
-					<li><img src="" alt="ar name"></li>
-					<li><img src="" alt="ar name"></li>
-					<li><img src="" alt="ar name"></li>
-				</ul>
+				<section class="pure-g " id="articles">
+<?php 
+foreach($articles as $article)
+{
+echo '					<article class="pure-u-4-24 dc">
+						<a href="'.$article['url'].'" class="dc"></a><img src='.$article['img'].' alt="ar img" width="100%">
+						<h2>'.$article['name'].'</h2>
+						<p class="link"><a href="'.$article['url'].'">see the offer</a> <a href="#">buy now</a></p>
+					</article>';
+}?>
+				</section>
 			</section>
 			<section class="pure-u-22-24">
 				<h2>about openshop</h2>
