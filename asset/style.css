@@ -1,7 +1,10 @@
 .ib{display:inline-block;}
+.dc{position:relative;z-index:0;}
+.dc a{position:relative;z-index:2;}
+a.dc{position:absolute;width:100%;height:100%;top:0;right:0;z-index:1;}
 
 header{background-color:#40A5B1;}
-header img{display:block;margin:auto;height:100%;}
+header img{display:block;margin:auto;height:100%;width:100%;}
 
 nav{background-color:#352F3D;}
 nav ul {padding:0;margin:0;text-align:center;}
@@ -31,6 +34,7 @@ article>h2,article>h1
 	border-top:solid rgba(0,0,0,0.5) 1px;
 }
 #article{margin: 0 5%;}
+#article>div{margin:auto;}
 #article+section ul{list-style-type: none;margin:auto;}
 #article+section ul li {background-color: rgba(0,0,0,0.2);}
 
@@ -38,4 +42,5 @@ footer{text-align:center;background-color:#352F3D;}
 footer div{text-align:initial;}
 footer ul{padding:0;}
 footer a{color:gray;}
-/* by gamgine
+footer>a,footer>ul{position:sticky;bottom:-1px;margin:0;background-color:#26212b;}
+/* by gamgine */

@@ -3,8 +3,8 @@
 		</header>
 		<nav class="pure-g">
 			<ul class="pure-u-2-3">
-				<li class="ib" id="logo"><a href="/"><img src="<?=$icon?>" alt="logo" width="100%"></a></li>
-				<li class="ib"><a href="/">openshop</a></li>
+				<li class="pure-u-1-3" id="logo"><a href="/"><img src="<?=$icon?>" alt="logo" width="100%" ></a></li>
+				<li class="pure-u-2-3"><a href="/">openshop</a></li>
 			</ul>
 			<ul class="pure-u-1-3">
 				<li class="ib"><a href="/session.php">login register</a></li>
