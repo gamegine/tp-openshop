@@ -39,10 +39,10 @@ echo '					<article class="pure-u-4-24 dc">
 				<article id="why">
 					<h2>why choose open source</h2>
 					<ul>
-						<li class="ib"><span class="fa fa-user-secret fa-5x"></span></li>
-						<li class="ib"><span class="fa fa-puzzle-piece fa-5x"></span></li>
-						<li class="ib"><span class="fa fa-edit fa-5x"></span></li>
-						<li class="ib"><span class="fa fa-share-square fa-5x"></span></li>
+						<!--li class="ib"><span class="fa fa-user-secret fa-5x"></span><p></p></li-->
+						<li class="ib"><span class="fa fa-puzzle-piece fa-5x"></span><p>modular</p></li>
+						<li class="ib"><span class="fa fa-edit fa-5x"></span><p>réviser</p></li>
+						<li class="ib"><span class="fa fa-share-square fa-5x"></span><p>share</p></li>
 					</ul>
 					<p>
 					The open source movement highlights quality.

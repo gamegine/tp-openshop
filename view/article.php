@@ -14,7 +14,6 @@
 					<div>
 						<p><a>vendeur</a> <a>note</a></p>
 						<p><a><?=$article['prix']?> $</a> <a>livraison</a></p>
-						ect ..
 					</div>
 					<p>
 					<?=$article['sdesc']?>

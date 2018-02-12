@@ -12,13 +12,14 @@ nav ul li{vertical-align:middle;}
 nav ul li a{color:white;}
 nav #logo{width:50px;}
 
-main section{margin:auto;}
+main section,main>form{margin: 5px auto;}
 
 main>section>h2,
 article>h2,article>h1
 {text-align:center;}
 #why>ul{text-align:center;padding:0;}
 #why>ul li{margin:0 25px;}
+#why>ul li span{margin-left:.25em;}
 
 #articles article
 {
@@ -42,5 +43,7 @@ footer{text-align:center;background-color:#352F3D;}
 footer div{text-align:initial;}
 footer ul{padding:0;}
 footer a{color:gray;}
-footer>a,footer>ul{position:sticky;bottom:-1px;margin:0;background-color:#26212b;}
+footer>a,footer>ul{position:sticky;bottom:-1px;margin:0;background-color:#26212b;text-decoration: none;}
+
+@media screen and (max-width: 540px){#why>ul li{margin:0 1px;}}
 /* by gamgine */
