@@ -10,6 +10,8 @@ nav{background-color:#352F3D;}
 nav ul {padding:0;margin:0;text-align:center;}
 nav ul li{vertical-align:middle;}
 nav ul li a{color:white;}
+nav ul+ul+ul{margin:auto;text-align:initial;}
+nav ul+ul+ul li{margin:0 10px;}
 nav #logo{width:50px;}
 
 main section,main>form{margin: 5px auto;}
@@ -21,6 +23,7 @@ article>h2,article>h1
 #why>ul li{margin:0 25px;}
 #why>ul li span{margin-left:.25em;}
 
+#articles{margin:auto;}
 #articles article
 {
 	margin: 1%;
@@ -34,6 +37,11 @@ article>h2,article>h1
 	background-color:rgba(0,0,0,0.2);
 	border-top:solid rgba(0,0,0,0.5) 1px;
 }
+#articles ul{margin:auto;}
+#articles>div {text-align:center;}
+#articles ul {padding:0;}
+#articles ul a {text-decoration:none;color:black;}
+
 #article{margin: 0 5%;}
 #article>div{margin:auto;}
 #article+section ul{list-style-type: none;margin:auto;}
