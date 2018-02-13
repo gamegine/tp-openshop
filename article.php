@@ -14,7 +14,7 @@
 	$reponse->bindValue(':id',$aid,PDO::PARAM_INT);
 	$reponse->execute();
 	$donnees = $reponse->fetch();
-	$article=array('name'=>$donnees['name'],'sdesc'=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",'prix'=>$donnees['prix'],'delivery'=>$donnees['delivery'],'desc'=>$donnees['txt'],'img'=>array());
+	$article=array('name'=>$donnees['name'],'sdesc'=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",'prix'=>$donnees['prix'],'delivery'=>$donnees['delivery'],'desc'=>$donnees['txt'],'img'=>array(),'action'=>"action.php?id=".$donnees['id']);
 	$reponse->closeCursor();
 	
 	$reponse = $bdd->prepare('SELECT `img`.url FROM `img` WHERE `img`.`aid`=:aid');
