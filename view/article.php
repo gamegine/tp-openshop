@@ -8,12 +8,12 @@
 			<article class="pure-g" id="article">
 				<h1 class="pure-u-1-1"><?=$article['name']?></h1>
 				<div class="pure-u-1-3">
-<?php foreach($article['img'] as $v){echo "					<img src=\"".$v."\" alt=\"".$v['name']."\"\" width=\"100%\">\n";} ?>
+<?php foreach($article['img'] as $v){echo "					<img src=\"".$v."\" width=\"100%\">\n";} ?>
 				</div>
 				<div class="pure-u-2-3">
 					<div>
 						<p><a>vendeur</a> <a>note</a></p>
-						<p><a><?=$article['prix']?> $</a> <a>livraison</a></p>
+						<p><a><?=$article['prix']?> $</a> <a><?=($article['delivery']!=0)?"delivery ".$article['delivery']." $":"free delivery";?></a></p>
 					</div>
 					<p>
 					<?=$article['sdesc']?>
