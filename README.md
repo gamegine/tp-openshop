@@ -8,13 +8,13 @@ the products can be sold by several users.
 ## :clipboard: functionality
 - [ ] session (login register ...)
 - [ ] user setting
-- [ ] sale an article
-- [ ] list of articles
+- [x] sale an article
+- [x] list of articles
 - [ ] article category
-- [ ] article information
+- [x] article information
 - [ ] article extension / modding
 - [ ] article comment / reviews
-- [ ] cart
+- [x] cart
 - [ ] transaction
 - [ ] delivery tracking
 - [ ] search
