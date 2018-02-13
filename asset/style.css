@@ -11,7 +11,7 @@ nav ul {padding:0;margin:0;text-align:center;}
 nav ul li{vertical-align:middle;}
 nav ul li a{color:white;}
 nav ul+ul+ul{margin:auto;text-align:initial;}
-nav ul+ul+ul li{margin:0 10px;}
+nav ul+ul li,nav ul+ul+ul li{margin:0 10px;}
 nav #logo{width:50px;}
 
 main section,main>form{margin: 5px auto;}
@@ -46,6 +46,12 @@ article>h2,article>h1
 #article>div{margin:auto;}
 #article+section ul{list-style-type: none;margin:auto;}
 #article+section ul li {background-color: rgba(0,0,0,0.2);}
+
+table.cart{width:90%;margin:auto;}
+table.cart th{width:20%;}
+table.cart th+th{width:50%;}
+table.cart th+th+th{width:15%;}
+table.cart th+th+th+th{width:15%;}
 
 footer{text-align:center;background-color:#352F3D;}
 footer div{text-align:initial;}
