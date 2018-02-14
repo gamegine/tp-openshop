@@ -14,7 +14,7 @@
 					<div>
 						<p><a>vendeur</a> <a>note</a></p>
 						<p><a><?=$article['prix']?> $</a> <a><?=($article['delivery']!=0)?"delivery ".$article['delivery']." $":"free delivery";?></a></p>
-						<p><a href="<?=$article['action']."&a=a"?>">add to cart</a></p>
+						<p><a href="<?=$article['action']."&a=a"?>">add to cart</a> <a href="<?=$article['action']."&a=b"?>">buy now</a></p>
 					</div>
 					<p>
 					<?=$article['sdesc']?>

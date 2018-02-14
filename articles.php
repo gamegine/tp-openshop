@@ -11,8 +11,7 @@
 	$desc="cat + articles page";
 	include("asset/bdd.php");
 	
-	//$page=(isset($_GET['p'])?intval(1):1;
-	$page=1;
+	$page=(isset($_GET['p']))?(intval(htmlentities($_GET['p']))*10)-9:1;
 	if(false)
 	{
 	$reponse = $bdd->prepare('');
@@ -20,13 +19,13 @@
 	}
 	else
 	{
-	$reponse = $bdd->prepare('SELECT `articles`.*,`img`.url FROM `articles`,`img` WHERE `img`.`id`= ifnull( `articles`.`img` , 0 ) LIMIT :p,10');
+	$reponse = $bdd->prepare('SELECT `articles`.*,`img`.url FROM `articles`,`img` WHERE `img`.`id`= ifnull( `articles`.`img` , 0 ) order by `id` LIMIT :p,10');
 	$reponse->bindValue(':p',$page,PDO::PARAM_INT);
 	}
 	$reponse->execute();
 	$articles=array();
 	while ($donnees = $reponse->fetch())
-	{array_push($articles, array('name'=>$donnees['name'],/*'sdesc'=>"ttt"*/'sdesc'=>substr($donnees['txt'],0,124),'prix'=>$donnees['prix'],'img'=>"/articlesimg/".$donnees['url'],'url'=>"/article.php?id=".$donnees['id'],'action'=>"action.php?a=a&id=".$donnees['id']) );}
+	{array_push($articles, array('name'=>$donnees['name'],/*'sdesc'=>"ttt"*/'sdesc'=>substr($donnees['txt'],0,124),'prix'=>$donnees['prix'],'img'=>"/articlesimg/".$donnees['url'],'url'=>"/article.php?id=".$donnees['id'],'action'=>"action.php?a=b&id=".$donnees['id']) );}
 	$reponse->closeCursor();
 	
 	if(false)
