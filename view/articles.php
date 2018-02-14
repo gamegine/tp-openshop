@@ -17,7 +17,7 @@ echo '				<article class="pure-u-sm-1-1 pure-u-md-10-24 pure-u-lg-1-4 pure-u-xl-
 				<div>
 					<p>page</p>
 					<ul>
-<?php for ($i = 1; $i <= $pages; $i++) {echo '						<li class="ib"><a href="articles.php?p='.$i.'">'.$i."</a></li>\n";}?>
+<?php for ($i = 1; $i <= $pages; $i++) {echo '						<li class="ib"><a href="articles.php?p='.$i.((isset($_GET['cat']))?("&cat=".htmlentities($_GET['cat'])):'').'">'.$i."</a></li>\n";}?>
 					</ul>
 				</div>
 			</div>
