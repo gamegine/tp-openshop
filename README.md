@@ -6,11 +6,11 @@ the product documentation is always provided and accessible.
 the products can be sold by several users.  
 [colors](http://www.colourlovers.com/palette/4555146/opensource)  
 ## :clipboard: functionality
-- [ ] session (login register ...)
+- [x] session (login register ...)
 - [ ] user setting
 - [x] sale an article
 - [x] list of articles
-- [ ] article category
+- [x] article category
 - [x] article information
 - [ ] article extension / modding
 - [ ] article comment / reviews
