@@ -11,7 +11,7 @@
 					if(isset($_GET['id']))
 					{
 						$reponse = $bdd->prepare('INSERT INTO `cart`(`uid`, `aid`, `n`) VALUES (:uid, :aid, 1)');
-						$reponse->bindValue(':uid',1,PDO::PARAM_INT);
+						$reponse->bindValue(':uid',$_SESSION['id'],PDO::PARAM_INT);
 						$reponse->bindValue(':aid',htmlentities($_GET['id']),PDO::PARAM_INT);
 						$reponse->execute();
 						$reponse->closeCursor();
@@ -22,7 +22,7 @@
 					if(isset($_GET['id']))
 					{
 						$reponse = $bdd->prepare('DELETE FROM `cart` WHERE `uid`=:uid and `id`=:id and `pay`=false');
-						$reponse->bindValue(':uid',1,PDO::PARAM_INT);
+						$reponse->bindValue(':uid',$_SESSION['id'],PDO::PARAM_INT);
 						$reponse->bindValue(':id',htmlentities($_GET['id']),PDO::PARAM_INT);
 						$reponse->execute();
 						$reponse->closeCursor();
