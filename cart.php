@@ -8,11 +8,11 @@
 		$css=array("https://use.fontawesome.com/releases/v5.0.6/css/all.css","https://unpkg.com/purecss@1.0.0/build/pure-min.css","/asset/style.css");
 		$designer=$author="gamgine";
 		$img = "/asset/banniere.jpg";
-		$title="openshop index";
+		$title="openshop cart";
 		$desc="open shop e-commerce dédié à l'open source";
 		
 		$reponse = $bdd->prepare('SELECT `cart`.`id` as cartid,`img`.`url`,`articles`.*,`cart`.`pay`,`cart`.`completed` FROM `cart`,`articles`,`img` WHERE `img`.`id`=ifnull(`articles`.`img`,0) and `articles`.`id`=`cart`.`aid` and `cart`.`uid`=:id');
-		$reponse->bindValue(':id',1,PDO::PARAM_INT);
+		$reponse->bindValue(':id',$_SESSION['id'],PDO::PARAM_INT);
 		$reponse->execute();
 		$articles=array();
 		$total=0;
