@@ -26,7 +26,7 @@
 	$reponse->execute();
 	$articles=array();
 	while ($donnees = $reponse->fetch())
-	{array_push($articles, array('name'=>$donnees['name'],/*'sdesc'=>"ttt"*/'sdesc'=>substr($donnees['txt'],0,124),'prix'=>$donnees['prix'],'img'=>"/articlesimg/".$donnees['url'],'url'=>"/article.php?a=".$donnees['id'],'action'=>"action.php?a=a&id=".$donnees['id']) );}
+	{array_push($articles, array('name'=>$donnees['name'],/*'sdesc'=>"ttt"*/'sdesc'=>substr($donnees['txt'],0,124),'prix'=>$donnees['prix'],'img'=>"/articlesimg/".$donnees['url'],'url'=>"/article.php?id=".$donnees['id'],'action'=>"action.php?a=a&id=".$donnees['id']) );}
 	$reponse->closeCursor();
 	
 	if(false)

@@ -36,6 +36,7 @@ echo '					<tr>
 }?>
 				</tbody>
 			</table>
+			<p>total : <?=$total?> $</p>
 		</main>
 <?php include('footer.html'); ?>	
 	</body>

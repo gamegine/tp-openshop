@@ -6,7 +6,8 @@
 <?php include('header.php'); ?>
 		<main class="pure-g">
 			<section class="pure-u-24-24" id="mostpopular">
-				<h2>most popular articles</h2>
+				<!--h2>most popular articles</h2-->
+				<h2>last articles</h2>
 				<section class="pure-g " id="articles">
 <?php 
 foreach($articles as $article)
@@ -14,8 +15,8 @@ foreach($articles as $article)
 echo '					<article class="pure-u-4-24 dc">
 						<a href="'.$article['url'].'" class="dc"></a><img src='.$article['img'].' alt="ar img" width="100%">
 						<h2>'.$article['name'].'</h2>
-						<p class="link"><a href="'.$article['url'].'">see the offer</a> <a href="#">buy now</a></p>
-					</article>';
+						<p class="link"><a href="'.$article['url'].'">see the offer</a> <a href="'.$article['action'].'">buy now</a></p>
+					</article>'."\n";
 }?>
 				</section>
 			</section>

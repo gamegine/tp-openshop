@@ -9,7 +9,7 @@
 <?php foreach($articles as $article)
 {
 echo '				<article class="pure-u-sm-1-1 pure-u-md-10-24 pure-u-lg-1-4 pure-u-xl-4-24 dc">
-					<a href="'.$article['url'].'" class="dc"></a><img src='.$article['img'].' alt="ar img" width="100%">
+					<a href="'.$article['url'].'" class="dc"></a><img src='.$article['img'].' alt="ar img">
 					<h2>'.$article['name'].'</h2><p>'.$article['sdesc'].'</p><p>'.$article['prix'].' $<p>
 					<p class="link"><a href="'.$article['url'].'">see the offer</a> <a href="'.$article['action'].'">buy now</a></p>
 				</article>';
@@ -24,4 +24,4 @@ echo '				<article class="pure-u-sm-1-1 pure-u-md-10-24 pure-u-lg-1-4 pure-u-xl-
 		</main>
 <?php include('footer.html'); ?>	
 	</body>
-</html>
+	</html>

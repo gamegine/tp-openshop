@@ -7,7 +7,6 @@
 	$designer=$author="gamgine";
 	
 	include("asset/bdd.php");
-	$arimg=array("/articlesimg/arimg.jpg");
 	
 	$aid=intval(htmlentities($_GET['id']));
 	$reponse = $bdd->prepare('SELECT `articles`.* FROM `articles` WHERE `articles`.`id`=:id');
@@ -20,11 +19,12 @@
 	$reponse = $bdd->prepare('SELECT `img`.url FROM `img` WHERE `img`.`aid`=:aid');
 	$reponse->bindValue(':aid',$aid,PDO::PARAM_INT);
 	$reponse->execute();
-	$donnees = $reponse->fetch();
+	while ($donnees = $reponse->fetch())
 	{ array_push($article['img'],"/articlesimg/".$donnees['url'] ); }
 	$reponse->closeCursor();
+	if(!isset($article['img'][0])){$article['img']=array("articlesimg/image_non_disponible.png");}
 
-	$img = $arimg[0];
+	$img = $article['img'][0];
 	$title=$article['name'];
 	$desc=$article['sdesc'];
 	include("view/article.php");

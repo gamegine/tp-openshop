@@ -7,11 +7,11 @@
 	$img = "/asset/banniere.jpg";
 
 	include("asset/bdd.php");
-	$reponse = $bdd->prepare('SELECT `articles`.*,`img`.url FROM `articles`,`img` WHERE `img`.`id`= ifnull( `articles`.`img` , 0 ) limit 1,3');
+	$reponse = $bdd->prepare('SELECT `articles`.*,`img`.url FROM `articles`,`img` WHERE `img`.`id`= ifnull( `articles`.`img` , 0 ) ORDER by `id` limit 1,3');
 	$reponse->execute();
 	$articles=array();
 	while ($donnees = $reponse->fetch())
-	{array_push($articles, array('name'=>$donnees['name'],'prix'=>$donnees['prix'],'img'=>"/articlesimg/".$donnees['url'],'url'=>"/article.php?a=".$donnees['id']) );}
+	{array_push($articles, array('name'=>$donnees['name'],'prix'=>$donnees['prix'],'img'=>"/articlesimg/".$donnees['url'],'url'=>"/article.php?id=".$donnees['id'],'action'=>"action.php?a=a&id=".$donnees['id']) );}
 	$reponse->closeCursor();
 
 	$title="openshop index";

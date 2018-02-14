@@ -33,6 +33,6 @@
 					header('Location: /');
 			}
 		}
-		else{header('Location: /');}
+		else{header('Location: /session.php');}
 	}
 	else{header('Location: /');}
