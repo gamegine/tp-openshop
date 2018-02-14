@@ -11,7 +11,7 @@
 	$reponse->execute();
 	$articles=array();
 	while ($donnees = $reponse->fetch())
-	{array_push($articles, array('name'=>$donnees['name'],'prix'=>$donnees['prix'],'img'=>"/articlesimg/".$donnees['url'],'url'=>"/article.php?id=".$donnees['id'],'action'=>"action.php?a=a&id=".$donnees['id']) );}
+	{array_push($articles, array('name'=>$donnees['name'],'prix'=>$donnees['prix'],'img'=>"/articlesimg/".$donnees['url'],'url'=>"/article.php?id=".$donnees['id'],'action'=>"action.php?a=b&id=".$donnees['id']) );}
 	$reponse->closeCursor();
 
 	$title="openshop index";
