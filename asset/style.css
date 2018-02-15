@@ -48,7 +48,7 @@ article>h2,article>h1
 #article{margin: 0 5%;}
 #article>div{margin:auto;}
 #article+section ul{list-style-type: none;margin:auto;}
-#article+section ul li {box-shadow : 0 4px 10px 0 rgba(0,0,0,0.2) , 0 4px 20px 0 rgba(0,0,0,0.19);}
+#article+section ul li {box-shadow : 0 4px 10px 0 rgba(0,0,0,0.2) , 0 4px 20px 0 rgba(0,0,0,0.19);padding:0 5px;}
 
 table.cart{width:90%;margin:auto;}
 table.cart th{width:20%;}
