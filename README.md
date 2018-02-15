@@ -15,7 +15,8 @@ the products can be sold by several users.
 - [ ] article extension / modding	#v2
 - [ ] article comment / reviews		#v2
 - [x] cart
-- [ ] transaction
+- [x] transaction # verif card
+- [ ] transaction #v2
 - [ ] delivery tracking				#v2
 - [ ] search						#v2
 - [ ] js sync                           #v2
@@ -35,3 +36,5 @@ the products can be sold by several users.
 ## :hammer: builds
 # License
 openshop is licensed under the [Mozilla Public License 2.0](https://github.com/gamgine/openshop/blob/master/LICENSE)
+
+## time to dev -7day

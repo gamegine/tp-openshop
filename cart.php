@@ -24,7 +24,7 @@
 		while ($donnees = $reponse->fetch())
 		{
 			if(!$donnees['completed']){if(!$donnees['pay']){$total+=intval($donnees['prix']);}array_push($articles, array('name'=>htmlentities($donnees['name']),'sdesc'=>htmlentities(substr($donnees['txt'],0,124)),'prix'=>$donnees['prix'],'img'=>"/articlesimg/".$donnees['url'],'action'=>"/action/delete.html/id=".$donnees['cartid'],'state'=>$donnees['pay']));}
-			else{array_push($articlesold, array('name'=>htmlentities($donnees['name']),'sdesc'=>htmlentities(substr($donnees['txt'],0,124)),'prix'=>$donnees['prix'],'img'=>"/articlesimg/".$donnees['url'],'action'=>"/action/buy.html/id=".$donnees['id']) );}
+			else{array_push($articlesold, array('name'=>htmlentities($donnees['name']),'sdesc'=>nl2br(htmlentities(substr($donnees['txt'],0,124))),'prix'=>$donnees['prix'],'img'=>"/articlesimg/".$donnees['url'],'action'=>"/action/buy.html/id=".$donnees['id']) );}
 		}
 		$reponse->closeCursor();
 		

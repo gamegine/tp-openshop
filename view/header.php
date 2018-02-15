@@ -14,6 +14,7 @@ if(isset($_SESSION['id'])){echo
 					<a href="#">'.htmlentities($_SESSION['name']).'</a>
 					<ul>
 						<li><a href="cart.html">cart</a></li>
+						<li><a href="sale.html">sale</a></li>
 					</ul>
 				</li>
 				<li class="ib"><a href="/session.html">logout</a></li>'."\n";}
