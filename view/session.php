@@ -1,4 +1,4 @@
-<?php $url="/session.php"; ?>
+<?php $url="/session.html"; ?>
 <!doctype html>
 <html lang="<?=$lang="en"?>">
 <?php include('asset/head.php'); ?>

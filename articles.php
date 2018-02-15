@@ -7,7 +7,7 @@
 	"https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css","/asset/style.css",);
 	$designer=$author="gamgine";
 	$img = "/asset/banniere.jpg";
-	$title="articles page 1";
+	$title="articles ".((isset($_GET['cat']))?'category '.htmlentities($_GET['cat']):'').(isset($_GET['p'])?' page '.(intval(htmlentities($_GET['p']))*10)-10:'');
 	$desc="cat + articles page";
 	include("asset/bdd.php");
 	
@@ -26,7 +26,7 @@
 	$reponse->execute();
 	$articles=array();
 	while ($donnees = $reponse->fetch())
-	{array_push($articles, array('name'=>$donnees['name'],/*'sdesc'=>"ttt"*/'sdesc'=>substr($donnees['txt'],0,124),'prix'=>$donnees['prix'],'img'=>"/articlesimg/".$donnees['url'],'url'=>"/article.php?id=".$donnees['id'],'action'=>"action.php?a=b&id=".$donnees['id']) );}
+	{array_push($articles, array('name'=>$donnees['name'],/*'sdesc'=>"ttt"*/'sdesc'=>substr($donnees['txt'],0,124),'prix'=>$donnees['prix'],'img'=>"/articlesimg/".$donnees['url'],'url'=>"/article-".str_replace(' ', '-',$donnees['name'])."-".$donnees['id'].".html",'action'=>"/action/buy.html/id=".$donnees['id']) );}
 	$reponse->closeCursor();
 	
 	if(isset($_GET['cat']))

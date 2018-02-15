@@ -7,17 +7,17 @@ the products can be sold by several users.
 [colors](http://www.colourlovers.com/palette/4555146/opensource)  
 ## :clipboard: functionality
 - [x] session (login register ...)
-- [ ] user setting
+- [ ] user setting					#v2
 - [x] sale an article
 - [x] list of articles
 - [x] article category
 - [x] article information
-- [ ] article extension / modding
-- [ ] article comment / reviews
+- [ ] article extension / modding	#v2
+- [ ] article comment / reviews		#v2
 - [x] cart
 - [ ] transaction
-- [ ] delivery tracking
-- [ ] search
+- [ ] delivery tracking				#v2
+- [ ] search						#v2
 ##  :floppy_disk: dev languages
 - html / css
 - php

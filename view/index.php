@@ -12,8 +12,8 @@
 <?php 
 foreach($articles as $article)
 {
-echo '					<article class="pure-u-4-24 dc">
-						<a href="'.$article['url'].'" class="dc"></a><img src='.$article['img'].' alt="ar img" width="100%">
+echo '					<article class="pure-u-1-4 dc">
+						<a href="'.$article['url'].'" class="dc"></a><img src='.$article['img'].' alt="ar img" width="100%" style="height: 14vw;">
 						<h2>'.$article['name'].'</h2>
 						<p class="link"><a href="'.$article['url'].'">see the offer</a> <a href="'.$article['action'].'">buy now</a></p>
 					</article>'."\n";
