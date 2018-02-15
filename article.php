@@ -7,13 +7,17 @@
 	$designer=$author="gamgine";
 	
 	include("asset/bdd.php");
+	$cat=array();
+	$reponse = $bdd->prepare('SELECT `name` FROM `category`');
+	$reponse->execute();
+	while ($donnees = $reponse->fetch()){array_push($cat,$donnees['name']);}
 	
 	$aid=intval(htmlentities($_GET['id']));
 	$reponse = $bdd->prepare('SELECT `articles`.* FROM `articles` WHERE `articles`.`id`=:id');
 	$reponse->bindValue(':id',$aid,PDO::PARAM_INT);
 	$reponse->execute();
 	$donnees = $reponse->fetch();
-	$article=array('name'=>$donnees['name'],'sdesc'=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",'prix'=>$donnees['prix'],'delivery'=>$donnees['delivery'],'desc'=>$donnees['txt'],'img'=>array(),'action'=>$donnees['id']);
+	$article=array('name'=>htmlentities($donnees['name']),'sdesc'=>htmlentities(substr($donnees['txt'],0,124)),'prix'=>$donnees['prix'],'delivery'=>$donnees['delivery'],'desc'=>htmlentities($donnees['txt']),'img'=>array(),'action'=>$donnees['id']);
 	$reponse->closeCursor();
 	
 	$reponse = $bdd->prepare('SELECT `img`.url FROM `img` WHERE `img`.`aid`=:aid');

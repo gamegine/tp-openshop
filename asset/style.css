@@ -9,10 +9,13 @@ header img{display:block;margin:auto;height:100%;width:100%;}
 nav{background-color:#352F3D;}
 nav ul {padding:0;margin:0;text-align:center;}
 nav ul li{vertical-align:middle;}
-nav ul li a{color:white;}
+nav ul li a{color:white;text-decoration:none;}
 nav ul+ul+ul{margin:auto;text-align:initial;}
 nav ul+ul li,nav ul+ul+ul li{margin:0 10px;}
 nav #logo{width:50px;}
+nav>ul>li>ul{position:absolute;display:none;margin-top:-.2em;padding-top:.2em}nav>ul>li>ul>li{list-style:none;}
+nav>ul>li>a:hover+ul,nav>ul>li>ul:hover,nav>ul>li>ul-li:hover{display: block;z-index:100;background-color:#352F3D;}
+
 
 main section,main>form{margin: 5px auto;}
 

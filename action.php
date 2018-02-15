@@ -16,7 +16,7 @@
 						$reponse->execute();
 						$reponse->closeCursor();
 						header('Location: /article.php?id='.htmlentities($_GET['id']));
-					}else{header('Location: /articles.php');}
+					}else{header('Location: /articles.html');}
 				break;
 				case 'b':
 					if(isset($_GET['id']))
@@ -26,8 +26,8 @@
 						$reponse->bindValue(':aid',htmlentities($_GET['id']),PDO::PARAM_INT);
 						$reponse->execute();
 						$reponse->closeCursor();
-						header('Location: /cart.php');
-					}else{header('Location: /articles.php');}
+						header('Location: /cart.html');
+					}else{header('Location: /articles.html');}
 				break;
 				case 'r':
 					if(isset($_GET['id']))
@@ -38,12 +38,12 @@
 						$reponse->execute();
 						$reponse->closeCursor();
 					}
-					header('Location: /cart.php');
+					header('Location: /cart.html');
 				break;
 				default:
 					header('Location: /');
 			}
 		}
-		else{header('Location: /session.php');}
+		else{header('Location: /session.html');}
 	}
 	else{header('Location: /');}

@@ -7,19 +7,19 @@
 	$img = "/asset/banniere.jpg";
 	$title="login/register";
 	
+	include("asset/bdd.php");
+	$cat=array();
+	$reponse = $bdd->prepare('SELECT `name` FROM `category`');
+	$reponse->execute();
+	while ($donnees = $reponse->fetch()){array_push($cat,$donnees['name']);}
 	if(isset($_SESSION['id'])){session_destroy();header('Location: /');}
 	elseif(/*isset($_POST) && !empty($_POST)*/$_SERVER['REQUEST_METHOD']=='POST')
 	{
-		include("asset/bdd.php");
 		$_SESSION['f_mail']=(isset($_POST['mail']))?htmlentities($_POST['mail']):$_SESSION['f_mail'];
 		if($_POST['a']=="l")
 		{
 			if(!empty($_POST['mail']) && !empty($_POST['mdp']))
 			{
-				/*$_SESSION['id']=1;$_SESSION['name']="gamgine";
-					
-					$_SESSION['f_mail']=$_SESSION['msg'] = null;
-				header('Location: /');*/
 				$reponse = $bdd->prepare('SELECT * FROM `users` WHERE `mail`=:mail');
 				$reponse->bindValue(':mail',$_POST['mail'],PDO::PARAM_STR);
 				$reponse->execute();
@@ -49,33 +49,36 @@
 		}
 		elseif($_POST['a']=="r")
 		{
-			if(!empty($_POST['name'])&&!empty($_POST['mail'])&&!empty($_POST['mdp']))
+			if(!empty($_POST['name'])&&!empty($_POST['mail'])&&!empty($_POST['mdp'])&&!empty($_POST['mdpc']))
 			{
-				$name = htmlentities($_POST['name']);
-				$mail = htmlentities($_POST['mail']);
-				$reponse = $bdd->prepare('SELECT * FROM `users` WHERE `mail`=:mail');
-				$reponse->bindValue(':mail',$mail,PDO::PARAM_STR);
-				$reponse->execute();
-				if($donnees = $reponse->fetch())
+				if($_POST['mdp'] == $_POST['mdp'])
 				{
-					$_SESSION['msg'] = 'user_exist';
-					header('Location: /session.php');
-				}
-				else
-				{
-					$reponse = $bdd->prepare('INSERT INTO `users`(`name`, `mail`, `mdp`) VALUES (:name,:mail,:mdp)');
-					$reponse->bindValue(':name',$name,PDO::PARAM_STR);
+					$name = htmlentities($_POST['name']);
+					$mail = htmlentities($_POST['mail']);
+					$reponse = $bdd->prepare('SELECT * FROM `users` WHERE `mail`=:mail');
 					$reponse->bindValue(':mail',$mail,PDO::PARAM_STR);
-					$options = ['cost' => 12,];
-					$reponse->bindValue(':mdp',password_hash($_POST['mdp'], PASSWORD_BCRYPT, $options),PDO::PARAM_STR);
 					$reponse->execute();
-					$reponse->closeCursor();
-					$_SESSION['id'] = $bdd->lastInsertId();
-					$_SESSION['name'] = $name;
-					
-					$_SESSION['f_mail']=$_SESSION['msg'] = null;
-					header('Location: /');
-				}
+					if($donnees = $reponse->fetch())
+					{
+						$_SESSION['msg'] = 'user_exist';
+						header('Location: /session.php');
+					}
+					else
+					{
+						$reponse = $bdd->prepare('INSERT INTO `users`(`name`, `mail`, `mdp`) VALUES (:name,:mail,:mdp)');
+						$reponse->bindValue(':name',$name,PDO::PARAM_STR);
+						$reponse->bindValue(':mail',$mail,PDO::PARAM_STR);
+						$options = ['cost' => 12,];
+						$reponse->bindValue(':mdp',password_hash($_POST['mdp'], PASSWORD_BCRYPT, $options),PDO::PARAM_STR);
+						$reponse->execute();
+						$reponse->closeCursor();
+						$_SESSION['id'] = $bdd->lastInsertId();
+						$_SESSION['name'] = $name;
+						
+						$_SESSION['f_mail']=$_SESSION['msg'] = null;
+						header('Location: /');
+					}
+				}else{$_SESSION['msg'] = 'mdp not match';header('Location: /session.php');}
 			}else{$_SESSION['msg'] = 'missing item';header('Location: /session.php');}
 		}else{header('Location: /session.php');}
-	}else{include("view/session.php");}	
+	}else{include("view/session.php");}
