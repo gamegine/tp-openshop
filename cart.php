@@ -3,6 +3,10 @@
 	if(isset($_SESSION['id']))
 	{
 		include("asset/bdd.php");
+		$cat=array();
+		$reponse = $bdd->prepare('SELECT `name` FROM `category`');
+		$reponse->execute();
+		while ($donnees = $reponse->fetch()){array_push($cat,$donnees['name']);}
 		$site_name="openshop";
 		$icon ="/asset/icon.png";
 		$css=array("https://use.fontawesome.com/releases/v5.0.6/css/all.css","https://unpkg.com/purecss@1.0.0/build/pure-min.css","/asset/style.css");
@@ -17,9 +21,9 @@
 		$articles=array();
 		$total=0;
 		while ($donnees = $reponse->fetch())
-		{$total+=intval($donnees['prix']);array_push($articles, array('name'=>$donnees['name'],'sdesc'=>substr($donnees['txt'],0,124),'prix'=>$donnees['prix'],'img'=>"/articlesimg/".$donnees['url'],'action'=>"/action/delete.html/id=".$donnees['cartid']) );}
+		{$total+=intval($donnees['prix']);array_push($articles, array('name'=>htmlentities($donnees['name']),'sdesc'=>htmlentities(substr($donnees['txt'],0,124)),'prix'=>$donnees['prix'],'img'=>"/articlesimg/".$donnees['url'],'action'=>"/action/delete.html/id=".$donnees['cartid']) );}
 		$reponse->closeCursor();
 		
 		include("view/cart.php");
 	}
-	else{header('Location: /session.php');}
+else{header('Location: /session.php');}
