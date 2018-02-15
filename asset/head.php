@@ -16,6 +16,23 @@
 <?php echo (!empty($author))?'		<meta name="author" content="'.$author.'">'."\n":""; ?>
 <?php echo (!empty($designer))?'		<meta name="designer" content="'.$designer.'">'."\n":""; ?>
 
+		<!-- Matomo -->
+		<script type="text/javascript">
+		  var _paq = _paq || [];
+		  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+		  _paq.push(['trackPageView']);
+		  _paq.push(['enableLinkTracking']);
+		  (function() {
+			var u="//212-83-172-83.nitrogroup.fr/piwik/";
+			_paq.push(['setTrackerUrl', u+'piwik.php']);
+			_paq.push(['setSiteId', '3']);
+			var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+			g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+		  })();
+		</script>
+		<noscript><p><img src="//212-83-172-83.nitrogroup.fr/piwik/piwik.php?idsite=3&rec=1" style="border:0;" alt="" /></p></noscript>
+		<!-- End Matomo Code -->
+
 		<meta name="robots" content="<?php echo (isset($index))? ($index)? 'index':'noindex':'index'; ?>,<?php echo (isset($follow))? ($follow)? 'follow':'nofollow':'follow'; ?>" />
 		<meta name="hostname" content="<?=$_SERVER['HTTP_HOST']?>">
 <?php echo (!empty($url))? '		<link rel="canonical" href="'.$site_root.$url.'"/>'."\n":''; ?>
