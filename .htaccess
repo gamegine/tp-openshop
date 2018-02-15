@@ -1,0 +1,18 @@
+Options -Indexes
+Options +FollowSymlinks
+RewriteEngine on
+#index is /
+
+RewriteRule ^articles.html$ articles.php
+RewriteRule ^articles/page-([0-9]{1,}).html$ articles.php?p=$1
+
+RewriteRule ^articles/([a-zA-Z0-9-]{4,})/page-([0-9]{1,}).html$ articles.php?p=$2&cat=$1
+RewriteRule ^articles/([a-zA-Z0-9-]{4,}).html$ articles.php?cat=$1
+
+RewriteRule ^article-[a-zA-Z0-9-]{1,}-([0-9]{1,}).html$ article.php?id=$1
+
+RewriteRule ^session.html$ session.php
+RewriteRule ^cart.html$ cart.php
+RewriteRule ^action/add.html/id=([0-9]{1,})$ action.php?a=a&id=$1
+RewriteRule ^action/buy.html/id=([0-9]{1,})$ action.php?a=b&id=$1
+RewriteRule ^action/delete.html/id=([0-9]{1,})$ action.php?a=r&id=$1

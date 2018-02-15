@@ -10,13 +10,13 @@
 <?php
 if(isset($_SESSION['id'])){echo 
 '				<li class="ib"><a href="#">'.htmlentities($_SESSION['name'])."</a></li>\n".
-'				<li class="ib"><a href="/session.php">logout</a></li>'."\n";}
-else{echo '				<li class="ib"><a href="/session.php">login register</a></li>'."\n";}
+'				<li class="ib"><a href="/session.html">logout</a></li>'."\n";}
+else{echo '				<li class="ib"><a href="/session.html">login register</a></li>'."\n";}
 ?>
 			</ul>
 			<ul class="pure-u-3-4">
 				<li class="ib"><a href="/" class="fas fa-home"></a></li>
-				<li class="ib"><a href="/articles.php">articles</a></li>
+				<li class="ib"><a href="/articles.html">articles</a></li>
 				<!--li class="ib"><form><i class="fas fa-search"></i><input type="search" name="q"><input type="submit"></form></li-->
 			</ul>
 		</nav>

@@ -1,4 +1,4 @@
-<?php $url="/cart.php"; ?>
+<?php $url="/cart.html"; ?>
 <!doctype html>
 <html lang="<?=$lang="en"?>">
 <?php include('asset/head.php'); ?>

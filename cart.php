@@ -17,7 +17,7 @@
 		$articles=array();
 		$total=0;
 		while ($donnees = $reponse->fetch())
-		{$total+=intval($donnees['prix']);array_push($articles, array('name'=>$donnees['name'],'sdesc'=>substr($donnees['txt'],0,124),'prix'=>$donnees['prix'],'img'=>"/articlesimg/".$donnees['url'],'action'=>"action.php?a=r&id=".$donnees['cartid']) );}
+		{$total+=intval($donnees['prix']);array_push($articles, array('name'=>$donnees['name'],'sdesc'=>substr($donnees['txt'],0,124),'prix'=>$donnees['prix'],'img'=>"/articlesimg/".$donnees['url'],'action'=>"/action/delete.html/id=".$donnees['cartid']) );}
 		$reponse->closeCursor();
 		
 		include("view/cart.php");
