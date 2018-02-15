@@ -18,9 +18,11 @@ the products can be sold by several users.
 - [ ] transaction
 - [ ] delivery tracking				#v2
 - [ ] search						#v2
+- [ ] js sync                           #v2
 ##  :floppy_disk: dev languages
 - html / css
 - php
+- mysql
 #  :flags: branch
 > **[master](../../tree/master)**     
 # :calling: Publication
