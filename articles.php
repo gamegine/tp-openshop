@@ -31,7 +31,7 @@
 	$reponse->execute();
 	$articles=array();
 	while ($donnees = $reponse->fetch())
-	{array_push($articles, array('name'=>htmlentities($donnees['name']),/*'sdesc'=>"ttt"*/'sdesc'=>htmlentities(substr($donnees['txt'],0,124)),'prix'=>$donnees['prix'],'img'=>"/articlesimg/".$donnees['url'],'url'=>"/article-".htmlentities(str_replace(' ', '-',$donnees['name']))."-".$donnees['id'].".html",'action'=>"/action/buy.html/id=".$donnees['id']) );}
+	{array_push($articles, array('name'=>htmlentities($donnees['name']),/*'sdesc'=>"ttt"*/'sdesc'=>nl2br(htmlentities(substr($donnees['txt'],0,124))),'prix'=>$donnees['prix'],'img'=>"/articlesimg/".$donnees['url'],'url'=>"/article-".htmlentities(str_replace(' ', '-',$donnees['name']))."-".$donnees['id'].".html",'action'=>"/action/buy.html/id=".$donnees['id']) );}
 	$reponse->closeCursor();
 	
 	if(isset($_GET['cat']))

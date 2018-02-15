@@ -36,10 +36,10 @@ echo '					<tr>
 						<td><a href="'.$article['action'].'">delete</a></td>
 					</tr>';
 }?>
-				</tbody>
+</tbody>
 			</table>
 			<p class="pure-u-3-4" style="text-align:end;">total : <?=$total?> $</p>
-			<a href="" class="pure-u-3-4" style="text-align:end;">finish the purchase</a>
+			<a href="/transaction.html" class="pure-u-3-4" style="text-align:end;">finish the purchase</a>
 			<br><br>
 			<table class="cart pure-table pure-table-horizontal">
 				<caption>cart old</caption>

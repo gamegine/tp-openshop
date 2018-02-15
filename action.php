@@ -40,6 +40,20 @@
 					}
 					header('Location: /cart.html');
 				break;
+				case 's':
+					if(isset($_POST['name'])&&isset($_POST['desc'])&&isset($_POST['prix']))//not sec --> verif // no img
+					{
+						$reponse = $bdd->prepare('INSERT INTO `articles`(`uid`,`name`, `prix`, `txt`) VALUES (:uid,:name,:prix,:desc)');
+						$reponse->bindValue(':uid',$_SESSION['id'],PDO::PARAM_INT);
+						$reponse->bindValue(':name',htmlentities($_POST['name']),PDO::PARAM_STR);
+						$reponse->bindValue(':desc',htmlentities($_POST['desc']),PDO::PARAM_STR);
+						$reponse->bindValue(':prix',htmlentities($_POST['prix']),PDO::PARAM_INT);
+						$reponse->execute();
+						$reponse->closeCursor();
+						$_SESSION['fname']=$_SESSION['prix']=null;
+					}else{header('Location: /sell.html');}
+					header('Location: /');
+				break;
 				default:
 					header('Location: /');
 			}

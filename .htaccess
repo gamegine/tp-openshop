@@ -12,6 +12,8 @@ RewriteRule ^article-[a-zA-Z0-9-]{1,}-([0-9]{1,}).html$ article.php?id=$1
 
 RewriteRule ^session.html$ session.php
 RewriteRule ^cart.html$ cart.php
+RewriteRule ^transaction.html$ transaction.php
+RewriteRule ^sale.html$ sale.php
 
 RewriteRule ^action/add.html/id=([0-9]{1,})$ action.php?a=a&id=$1
 RewriteRule ^action/buy.html/id=([0-9]{1,})$ action.php?a=b&id=$1
