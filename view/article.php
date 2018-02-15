@@ -27,7 +27,7 @@
 				</div>
 			</article>
 			<section class="pure-g">
-				<h2 class="pure-u-1-1">commentary</h2>
+				<h2 class="pure-u-1-1">Customer Reviews</h2>
 				<ul class="pure-u-20-24">
 					<li><a>username</a><p>blablabla</p></li>
 					<li><a>username</a><p>blablabla</p></li>
