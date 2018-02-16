@@ -22,6 +22,13 @@ echo '				<article class="pure-u-sm-1-1 pure-u-md-10-24 pure-u-lg-1-4 pure-u-xl-
 				</div>
 			</div>
 		</main>
-<?php include('footer.html'); ?>	
+<?php include('footer.html'); ?>
+	<script type="text/javascript">
+	_paq.push(['setEcommerceView',
+	productSku = false, // No product on Category page
+	productName = false, // No product on Category page
+	category = "<?=(isset($_GET['cat']))?htmlentities($_GET['cat']):'';?>" // Category Page, or array of up to 5 categories
+	]);
+	</script>
 	</body>
 	</html>
