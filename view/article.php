@@ -37,11 +37,14 @@
 <?php include('footer.html'); ?>
 	 <script type="text/javascript">
 	// all parameters are optional, but we recommend to set at minimum productSKU and productName
-	_paq.push(['setEcommerceView',
-	"<?=$article['action']?>", // (required) SKU: Product unique identifier
-	"<?=$article['name']?>", // (optional) Product name
+	_paq.push(
+	[
+		'setEcommerceView',
+		"<?=$article['action']?>", // (required) SKU: Product unique identifier
+		"<?=$article['name']?>", // (optional) Product name
+	]
 	<?=$article['prix']?> // (optional) Product Price as displayed on the page
-	]);
+	);
 	_paq.push(['trackPageView']);
 	</script>
 	</body>
